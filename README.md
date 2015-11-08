@@ -45,7 +45,7 @@ This package also comes with a facade
 
 'aliases' => [
     ...
-    'Codepen' => Unicodeveloper\Codepen\Facades\Codepen::class',
+    'Codepen' => Unicodeveloper\Codepen\Facades\Codepen::class,
     ...
 ]
 ```
