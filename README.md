@@ -109,7 +109,7 @@ Codepen::getPopularPens($username);
 Codepen::getPublicPens($username);
 // e.g sample $username is chriscoyier, returns an array of the public pens belonging to chriscoyier
 
-Codepen::getForkedPens(($username);
+Codepen::getForkedPens($username);
 // e.g sample $username is chriscoyier, returns an array of the most forked pens belonging to chriscoyier
 
 ```
