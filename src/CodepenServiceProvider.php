@@ -15,19 +15,6 @@ class CodepenServiceProvider extends ServiceProvider
     protected $defer = false;
 
     /**
-     * Publishes all the config file this package needs to function
-     * @return void
-     */
-    public function boot()
-    {
-        $config = realpath(__DIR__.'/../resources/config/codepen.php');
-
-        $this->publishes([
-            $config => config_path('codepen.php')
-        ]);
-    }
-
-    /**
      * Register the application services
      * @return void
      */
