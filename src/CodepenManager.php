@@ -7,11 +7,6 @@ use GuzzleHttp\Client;
 
 class CodepenManager
 {
-    /**
-     * Self-issued token from your Medium Profile Settings Page
-     * @var mixed
-     */
-    protected $integrationToken;
 
     /**
      * [$client description]
@@ -26,25 +21,16 @@ class CodepenManager
     protected $response;
 
     /**
-     * [$baseUrl description]
+     * Unofficial Codepen API
+     * Source: http://cpv2api.com/
      * @var string
      */
-    protected $baseUrl = 'https://api.medium.com/v1';
+    protected $baseUrl = 'http://cpv2api.com';
 
     public function __construct()
     {
-        $this->setToken();
         $this->setRequestOptions();
         $this->setResponse('/me');
-    }
-
-    /**
-     * Get token from config file
-     * @return  void
-     */
-    public function setToken()
-    {
-        $this->integrationToken = Config::get('medium.integrationToken');
     }
 
     /**
@@ -53,12 +39,7 @@ class CodepenManager
      */
     private function setRequestOptions()
     {
-        $authBearer = 'Bearer' . ' ' . $this->integrationToken;
-
         $this->client = new Client(['base_uri' => $this->baseUrl]);
-
-        // Set a single header using path syntax
-        $this->client->setDefaultOption('headers/Authorization', $authBearer);
     }
 
     /**
@@ -72,18 +53,18 @@ class CodepenManager
     }
 
     /**
-     * Set the url for getting the personal detail
+     * Set the url for getting the most popular pens
      * @return object
      */
-    public function me()
+    public function getMostPopularPens()
     {
-        $this->setResponse('/me');
+        $this->setResponse('/pens/popular');
 
         return $this->data();
     }
 
     /**
-     *  Get the personal details of the Medium user
+     *  Get the details of the required request
      * @return object
      */
     private function data()
