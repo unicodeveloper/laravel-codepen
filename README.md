@@ -50,29 +50,6 @@ This package also comes with a facade
 ]
 ```
 
-Publish the config file by running:
-
-```bash
-php artisan vendor:publish
-```
-
-The config file will now be located at `config/codepen.php`.
-
-## Configuration
-
-This is the `codepen.php` file in the `config` directory. Go to your [medium settings page](https://medium.com/me/settings),
-and generate an access token also known as integration token. Integration tokens do not expire right now, though they may be
-revoked by the user at any time.
-
-```php
-/**
- *  Config file that a user/developer can insert the self-issued access token
- */
-return [
-    'integrationToken' => ''
-];
-```
-
 ## Usage
 
 ##### MediumManager
@@ -88,27 +65,54 @@ This facade will dynamically pass static method calls to the `'laravel-codepen'`
 Here you can see an example of just how simple this package is to use.
 
 ```php
-use Unicodeveloper\Medium\Facades\Medium;
+use Unicodeveloper\Codepen\Facades\Codepen;
 // or you can alias this in config/app.php like I mentioned initially above
 
-Medium::me()->id;
-// returns the id of the medium user that can be used for future requests e.g 13889cdb2bb57e75ab7d7261f1f0c4df0e824b3f2249f55b788c0dc2ae84c6b8f
+Codepen::getMostPopularPens();
+// returns an array containing 12 results of the most popular codepens
 
-Medium::me()->username;
-// returns the username of the medium user e.g prosper
+Codepen::getLatestPickedPens();
+// returns an array containing 12 results of the latest picked codepens
 
-Medium::me()->name;
-// returns the full name of the medium user e.g Testing Tester
+Codepen::getRecentlyCreatedPens();
+// returns an array containing 12 results of the most recently created codepens
 
-Medium::me()->url;
-// returns the url of the medium profile e.g  "https://medium.com/@prosper"
+Codepen::getProfile($username);
+// returns an object containing the profile of a user . e.g $username is chriscoyier
+{#169 ▼
+  +"nicename": "Chris Coyier"
+  +"username": "chriscoyier"
+  +"avatar": "//s3-us-west-2.amazonaws.com/s.cdpn.io/3/profile/profile-512_22.jpg"
+  +"location": "Milwaukee, WI"
+  +"bio": "I'm kinda into this whole CodePen thing."
+  +"pro": true
+  +"followers": "6399"
+  +"following": "1165"
+  +"links": array:3 [▶]
+}
 
-Medium::me()->imageUrl;
-// returns the url of the medium user avatar
+Codepen::getLovedPosts($username);
+//  e.g sample $username is chriscoyier, returns an array of the most loved posts belonging to chriscoyier
+
+Codepen::getPopularPosts($username);
+// e.g sample $username is chriscoyier, returns an array of the most popular posts belonging to chriscoyier
+
+Codepen::getPublishedPosts($username);
+// e.g sample $username is chriscoyier, returns an array of the most published posts belonging to chriscoyier
+
+Codepen::getLovedPens($username);
+// e.g sample $username is chriscoyier, returns an array of the most loved pens belonging to chriscoyier
+
+Codepen::getPopularPens($username);
+// e.g sample $username is chriscoyier, returns an array of the most popular pens belonging to chriscoyier
+
+Codepen::getPublicPens($username);
+// e.g sample $username is chriscoyier, returns an array of the public pens belonging to chriscoyier
+
+Codepen::getForkedPens(($username);
+// e.g sample $username is chriscoyier, returns an array of the most forked pens belonging to chriscoyier
+
 ```
-
-
-# WIP - PLEASE DON'T USE IN PRODUCTION YET!!!
 
 ## Change log
 
