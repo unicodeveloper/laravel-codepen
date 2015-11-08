@@ -52,9 +52,9 @@ This package also comes with a facade
 
 ## Usage
 
-##### MediumManager
+##### CodepenManager
 
-This is the class of most interest. It is bound to the ioc container as `'laravel-medium'` and can be accessed using the `Facades\Medium` facade.
+This is the class of most interest. It is bound to the ioc container as `'laravel-codepen'` and can be accessed using the `Facades\Codepen` facade.
 
 ##### Facades\Codepen
 
