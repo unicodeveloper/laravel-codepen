@@ -111,7 +111,6 @@ Codepen::getPublicPens($username);
 
 Codepen::getForkedPens($username);
 // e.g sample $username is chriscoyier, returns an array of the most forked pens belonging to chriscoyier
-
 ```
 
 ## Change log
