@@ -2,21 +2,22 @@
 
 namespace Unicodeveloper\Codepen;
 
-use Illuminate\Support\Facades\Config;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Config;
+
 
 class CodepenManager
 {
 
     /**
-     * [$client description]
-     * @var [type]
+     * Instance of GuzzleHttp
+     * @var object
      */
     protected $client;
 
     /**
-     * [$response description]
-     * @var [type]
+     * Data response
+     * @var object
      */
     protected $response;
 
