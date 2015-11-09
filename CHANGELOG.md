@@ -2,10 +2,11 @@
 
 All Notable changes to `laravel-codepen` will be documented in this file
 
-## NEXT - YYYY-MM-DD
+## 2015-11-09
 
 ### Added
-- Nothing
+- user function
+- Update ReadMe to accomodate how to use user function
 
 ### Deprecated
 - Nothing
@@ -18,3 +19,7 @@ All Notable changes to `laravel-codepen` will be documented in this file
 
 ### Security
 - Nothing
+
+## 2015-11-08
+
+- Initial Release
