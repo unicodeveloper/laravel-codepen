@@ -91,26 +91,47 @@ Codepen::getProfile($username);
   +"links": array:3 [▶]
 }
 
+Codepen::user('chriscoyier')->location
+// returns Milwaukee, WI
+
+Codepen::user('chriscoyier')->nicename
+// returns Chris Coyier
+
+Codepen::user('chriscoyier')->username
+// returns chriscoyier
+
+Codepen::user('chriscoyier')->avatar
+// returns //s3-us-west-2.amazonaws.com/s.cdpn.io/3/profile/profile-512_22.jpg
+
+Codepen::user('chriscoyier')->bio
+// returns I'm kinda into this whole CodePen thing.
+
+Codepen::user('chriscoyier')->followers
+// returns 6399
+
+Codepen::user('chriscoyier')->following
+// returns 1165
+
 Codepen::getLovedPosts($username);
-//  e.g sample $username is chriscoyier, returns an array of the most loved posts belonging to chriscoyier
+//  e.g sample $username is chriscoyier, returns an array of his most loved posts
 
 Codepen::getPopularPosts($username);
-// e.g sample $username is chriscoyier, returns an array of the most popular posts belonging to chriscoyier
+// e.g sample $username is chriscoyier, returns an array of his most popular posts
 
 Codepen::getPublishedPosts($username);
-// e.g sample $username is chriscoyier, returns an array of the most published posts belonging to chriscoyier
+// e.g sample $username is chriscoyier, returns an array of his most published posts
 
 Codepen::getLovedPens($username);
-// e.g sample $username is chriscoyier, returns an array of the most loved pens belonging to chriscoyier
+// e.g sample $username is chriscoyier, returns an array of his most loved pens
 
 Codepen::getPopularPens($username);
-// e.g sample $username is chriscoyier, returns an array of the most popular pens belonging to chriscoyier
+// e.g sample $username is chriscoyier, returns an array of his most popular pens
 
 Codepen::getPublicPens($username);
-// e.g sample $username is chriscoyier, returns an array of the public pens belonging to chriscoyier
+// e.g sample $username is chriscoyier, returns an array of his public pens
 
 Codepen::getForkedPens($username);
-// e.g sample $username is chriscoyier, returns an array of the most forked pens belonging to chriscoyier
+// e.g sample $username is chriscoyier, returns an array of his most forked pens
 ```
 
 ## Change log

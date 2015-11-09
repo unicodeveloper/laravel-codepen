@@ -182,6 +182,16 @@ class CodepenManager
     }
 
     /**
+     * Get a user's details and access each attribute like username, avatar, location, bio etc
+     * @param  string $username
+     * @return object
+     */
+    public function user($username)
+    {
+        return $this->getProfile($username);
+    }
+
+    /**
      *  Get the details of the required request
      * @return object
      */
