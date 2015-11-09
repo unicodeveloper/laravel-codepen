@@ -4,7 +4,6 @@
 [![License](https://poser.pugx.org/unicodeveloper/laravel-codepen/license.svg)](LICENSE.md)
 ![](https://img.shields.io/badge/unicodeveloper-approved-brightgreen.svg)
 [![Build Status](https://img.shields.io/travis/unicodeveloper/laravel-codepen.svg)](https://travis-ci.org/unicodeveloper/laravel-codepen)
-[![Quality Score](https://img.shields.io/scrutinizer/g/unicodeveloper/laravel-codepen.svg?style=flat-square)](https://scrutinizer-ci.com/g/unicodeveloper/laravel-codepen)
 [![Total Downloads](https://img.shields.io/packagist/dt/unicodeveloper/laravel-codepen.svg?style=flat-square)](https://packagist.org/packages/unicodeveloper/laravel-codepen)
 
 > Laravel 5 Package to work with Codepen. Very easy to use. Offers the use of Facades and Dependency Injection
