@@ -91,25 +91,25 @@ Codepen::getProfile($username);
   +"links": array:3 [▶]
 }
 
-Codepen::user('chriscoyier')->location
+Codepen::user('chriscoyier')->location;
 // returns Milwaukee, WI
 
-Codepen::user('chriscoyier')->nicename
+Codepen::user('chriscoyier')->nicename;
 // returns Chris Coyier
 
-Codepen::user('chriscoyier')->username
+Codepen::user('chriscoyier')->username;
 // returns chriscoyier
 
-Codepen::user('chriscoyier')->avatar
+Codepen::user('chriscoyier')->avatar;
 // returns //s3-us-west-2.amazonaws.com/s.cdpn.io/3/profile/profile-512_22.jpg
 
-Codepen::user('chriscoyier')->bio
+Codepen::user('chriscoyier')->bio;
 // returns I'm kinda into this whole CodePen thing.
 
-Codepen::user('chriscoyier')->followers
+Codepen::user('chriscoyier')->followers;
 // returns 6399
 
-Codepen::user('chriscoyier')->following
+Codepen::user('chriscoyier')->following;
 // returns 1165
 
 Codepen::getLovedPosts($username);
